@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get-set</title>
+</head>
+<script>
+    class Animal{
+        constructor(name){
+            this._name = name;
+        }
+
+        fly(){
+            console.log("Mai uddh rha hu");
+        }
+
+        get name(){
+            return this._name // nomenclature is must i.e this._name 
+        }
+
+        set name(newName){
+            this._name = newName
+        }
+    }
+
+    
+    class Rabit extends Animal{
+        eatCarrot(){
+            console.log("eating carrot");
+            
+        }
+    }
+    
+    let a = new Animal("Virat");
+    let rabbit = new Rabit();
+    let c = 56;
+
+    a.fly();
+    console.log(a.name);
+    a.name = "Kohli"
+    console.log(a.name);
+
+    console.log(rabbit instanceof Animal); // true because of inheritance
+    console.log(a instanceof Animal);
+    console.log(c instanceof Animal);
+    
+    
+
+</script>
+<body>
+    <h1>get and set methods</h1>
+</body>
+</html>

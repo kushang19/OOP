@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Methods</title>
+    <script>
+        class Animal{
+            constructor(name){
+                this.name = Animal.capitalize(name); //Static methods can be only used with its class name
+            }
+
+            walk(){
+                console.log(`${this.name} is walking`);
+            }
+
+           static capitalize(name){
+                return name.charAt(0).toUpperCase() + name.substr(1,name.length);
+            }
+        }
+        
+        let jack = new Animal("jack");
+            jack.walk();
+
+    </script>
+</head>
+<body>
+    <h1>Static Methods</h1>
+</body>
+</html>
