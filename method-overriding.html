@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>method-overriding</title>
+    <script>
+        class Empolyee{
+            // constructor(name){
+            //     console.log(`${name} - Empolyee constructor is here`);
+            //     this.name = name;
+                
+            // }
+            login(){
+                console.log(`Empolyee has logged in`);
+                
+            }
+            logout(){
+                console.log(`Empolyee has logged out`);
+                
+            }
+            requestLeaves(leaves){
+                console.log(`Empolyee has requested for ${leaves} leaves`);
+                
+            }
+        }
+
+        class Programmer extends Empolyee{
+
+            // if there is no constructor then Javascript Engine creates it automtically like below 
+            // constructor(...args){
+            //     super(...args)
+            // } 
+
+            constructor(name){
+                super(name)
+                console.log(`${name} - Programmer constructor is here`);
+                this.name = name;
+                
+            }
+
+            requestCoffee(x){
+                console.log(`Empolyee has requested for ${x} coffees`);
+            }
+
+            // method-overriding
+            requestLeaves(leaves){
+                // console.log(`Empolyee has requested for ${leaves + 1} leaves (One Extra given from our side)`);
+                super.requestLeaves(6);
+                console.log("One Extra Added");
+                
+            }
+        }
+
+        // e = new Empolyee();
+        // e.login();
+        // e.requestLeaves(5);
+
+        e = new Programmer("Kushang");
+        e.login();
+        e.requestLeaves(3);
+
+    </script>
+</head>
+<body>
+    <h1>method-overriding</h1>
+</body>
+</html>

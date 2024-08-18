@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Inheritance - extends keyword</title>
+    <script>
+        class Animal{
+            constructor(name,color) {
+                this.name = name;
+                this.color = color;
+            }
+
+            run(){
+                console.log(this.name + " is running");
+            }
+
+            shout(){
+                console.log(this.name + " is shouting");
+            }
+        }
+
+        class Monkey extends Animal{
+            eatBanana(){
+                console.log(this.name + " is eating banana");
+                
+            }
+        }
+
+        let animal = new Animal("Ranbir", "white");
+        let monkey = new Monkey("Chimpu", "orange");
+
+        animal.run();
+        monkey.shout();
+        monkey.eatBanana();
+
+    </script>
+</head>
+<body>
+    <h1>Class Inheritance - extends keyword</h1>
+</body>
+</html>

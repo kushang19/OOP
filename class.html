@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+    <script>
+        class RailwayForm{
+
+            constructor(givenName, trainNo){
+                this.name = givenName;
+                this.trainNo = trainNo;
+            }
+
+            submit(){
+                alert(this.name + ": Your Form is Submitted with train number " + this.trainNo);
+            }
+
+            cancel(){
+                alert(this.name + ": Your Form is Cancelled with train number " + this.trainNo);
+            }
+
+        }
+
+        const harryForm = new RailwayForm("Harry", 11890);
+        harryForm.submit();
+
+        const kushangForm1 = new RailwayForm("Kushang", 10420);
+        const kushangForm2 = new RailwayForm("Kushang", 39211);
+
+        kushangForm1.submit();
+        kushangForm2.submit();
+        kushangForm1.cancel();
+
+    </script>
+</head>
+<body>
+    <h1>class</h1>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+    <script>
+        let a = {
+            name: "Kushang",
+            language: "JavaScript",
+            run: () => {
+                alert("Self Run...")
+            }
+        }
+
+        let p = {
+            run: () => {
+                alert("Run...");
+            }
+        }
+
+        
+        p.__proto__ = {
+            age: 29,
+        }
+
+        a.__proto__ = p;
+
+        console.log(a.age);
+        a.run();
+
+
+        
+
+    </script>
+</head>
+<body>
+    <h1>protoype</h1>
+</body>
+</html>
