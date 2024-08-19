@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+    <style>body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}</style>
+
+    <script>
+        class Animal{
+            constructor(name){
+                this.name = name;
+            }
+            speak(){
+                console.log(`${this.name} makes a noise`);
+                
+            }
+        };
+
+        class Dog extends Animal{
+            speak(){
+                console.log(`${this.name} barks`);
+                
+            }
+        };
+
+        let dog = new Dog("Rex");
+        dog.speak();
+
+    </script>
+</head>
+<body>
+    <h1>Inheritance</h1>
+    <p><b>Definition:</b>
+        Inheritance allows one class to inherit the properties and methods of another class. This helps in code reusability and creating a hierarchical relationship between classes.
+    </p>
+    <br>
+    <p><b>Explanation:</b>
+        The Dog class inherits from the Animal class, but it overrides the speak method to provide its own implementation.
+    </p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation</title>
+    <style>body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}</style>
+    <script>
+        class Car{
+            constructor(make,model){
+                this.make = make;
+                this.model = model;
+
+                let speed = 0 //private variable
+
+                this.accelerate = function(){
+                    speed += 10;
+                };
+
+                this.getSpeed = function(){
+                    return speed;
+                }
+            }
+        };
+
+        let myCar = new Car("Audi", "Q7");
+        myCar.accelerate();
+
+        console.log(myCar.getSpeed());
+        
+    </script>
+</head>
+<body>
+    <h1>Encapsulation</h1>
+    <p>
+        <b>Definition:</b> 
+        Encapsulation involves bundling the data (properties) and methods (functions) that operate on the data into a single unit, typically a class. It also restricts direct access to some of an object's components, which is a means of preventing accidental interference and misuse.
+    </p>
+    <br>
+    <p><b>Explanation:</b> 
+        Here, speed is encapsulated within the Car class and is not directly accessible from outside the class, but it can be modified and accessed through the methods accelerate() and getSpeed().
+    </p>
+</body>
+</html>

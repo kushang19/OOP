@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstraction</title>
+    <style>body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}</style>
+
+    <script>
+        class Car{
+            startEngine(){
+                this._checkFuel();
+                this._ignite();
+                console.log(`Engine Started...`);
+            };
+
+            _checkFuel(){
+                console.log(`Check fuel level`);
+            };
+
+            _ignite(){
+                console.log(`Igniting Engine`);
+            };
+        };
+
+        let myCar = new Car();
+        myCar.startEngine();
+    </script>
+</head>
+<body>
+    <h1>Abstraction</h1>
+    <p><b>Definition:</b>
+        Abstraction is the concept of hiding the complex implementation details and showing only the essential features of the object. It helps in reducing programming complexity and effort.
+    </p>
+    <br>
+    <p><b>Explanation:</b>
+        The startEngine method provides a simple interface to start the car's engine, while the complex details of how it works (_checkFuel, _ignite) are hidden from the user. The methods prefixed with _ are conventionally treated as private.
+    </p>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism</title>
+    <style>body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}</style>
+
+    <script>
+        class Animal{
+            constructor(name){
+                this.name = name;
+            }
+            speak(){
+                console.log(`${this.name} makes a noise`);
+                
+            }
+        };
+
+        class Dog extends Animal{
+            speak(){
+                console.log(`${this.name} barks`);
+                
+            }
+        };
+
+        class Cat extends Animal{
+            speak(){
+                console.log(`${this.name} meows`);
+                
+            }
+        };
+
+        function makeSound(animal){
+            animal.speak();
+        };
+
+        let dog = new Dog("Rex");
+        let cat = new Cat("Cuttu");
+
+        makeSound(dog);
+        makeSound(cat);
+
+    </script>
+</head>
+<body>
+    <h1>Polymorphism</h1>
+    <p><b>Definition:</b>
+        Polymorphism means "many forms" and allows objects to be treated as instances of their parent class. A method can do different things based on the object it is acting upon.
+    </p>
+    <br>
+    <p><b>Explanation:</b>
+        The makeSound function can accept any object that is an instance of the Animal class and will call the appropriate speak method based on the actual object type.
+    </p>
+</body>
+</html>
